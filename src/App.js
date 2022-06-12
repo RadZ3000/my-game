@@ -30,13 +30,15 @@ class GameApp extends React.Component {
       })
     }, 1000)
     document.getElementById("attack").disabled = true;
+    document.getElementById("items").disabled = true;
   }
 
   handleItems = (event) => {
-
+    console.log(ItemsObj);
   }
 
   handleEndTurn = (event) => {
+    document.getElementById("end-turn").disabled = true;
     this.setState({
       textDiv: "Opponent's Turn..."
     })
@@ -48,7 +50,11 @@ class GameApp extends React.Component {
       })
     }, 1000)
 
-    document.getElementById("attack").disabled = false;
+    setTimeout(() => {
+      document.getElementById("attack").disabled = false;
+      document.getElementById("items").disabled = false;
+      document.getElementById("end-turn").disabled = false;
+    }, 1500)
 
   }
 

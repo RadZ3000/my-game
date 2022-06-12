@@ -1,3 +1,4 @@
+
 let ItemsObj = {
     Sword: 20,
     Spear: 15,
