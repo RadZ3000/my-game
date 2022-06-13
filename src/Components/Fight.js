@@ -5,9 +5,9 @@ class Fight extends Component {
     state = {
         renderView: 0,
         textDiv: "Fight!",
-        player1Health: 500,
+        player1Health: 250,
         player1Attack: 20,
-        player2Health: 500,
+        player2Health: 250,
         player2Attack: 15,
     }
     handleView = e => {
