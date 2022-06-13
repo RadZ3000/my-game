@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import Main from './Components/Main';
-import Fight from './Components/FightComponent'
+import Fight from './Components/Fight'
 import Items from './Components/Items';
 
 // window.onbeforeunload = (e) => {
