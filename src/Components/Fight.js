@@ -2,13 +2,19 @@ import React, { Component } from 'react';
 import Items from './Items';
 
 class Fight extends Component {
-        state = {
-            textDiv: "Fight!",
-            player1Health: 500,
-            player1Attack: 20,
-            player2Health: 500,
-            player2Attack: 15,
-        }
+    state = {
+        renderView: 0,
+        textDiv: "Fight!",
+        player1Health: 500,
+        player1Attack: 20,
+        player2Health: 500,
+        player2Attack: 15,
+    }
+    handleView = e => {
+        this.setState({
+            renderView: +e.target.value
+        })
+    }
     handleAttack = (event) => {
         this.setState({
             textDiv: "You try to strike...",
@@ -49,18 +55,23 @@ class Fight extends Component {
 
     }
     render() {
-        return (
-            <div id="fight-div">
-                <div id="text-div"><h1>{this.state.textDiv}</h1></div>
-                <div id="player1">Player 1: {this.state.player1Health} HP</div>
-                <div id="player2">Player 2: {this.state.player2Health} HP</div>
-                <div className='button-div'>
-                    <button id="attack" onClick={this.handleAttack}>Attack</button>
-                    <button id="items" onClick={this.handleItems}>Items</button>
-                    <button id="end-turn" onClick={this.handleEndTurn}>End Turn</button>
-                </div>
-            </div>
-        )
+        switch (this.state.renderView) {
+            case 1:
+                return <Items />;
+            default:
+                return (
+                    <div id="fight-div">
+                        <div id="text-div"><h1>{this.state.textDiv}</h1></div>
+                        <div id="player1">Player 1: {this.state.player1Health} HP</div>
+                        <div id="player2">Player 2: {this.state.player2Health} HP</div>
+                        <div className='button-div'>
+                            <button id="attack" onClick={this.handleAttack}>Attack</button>
+                            <button id="items" value={1} onClick={this.handleView}>Items</button>
+                            <button id="end-turn" onClick={this.handleEndTurn}>End Turn</button>
+                        </div>
+                    </div>
+                )
+        }
     }
 }
 
