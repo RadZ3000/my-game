@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
+// import ReactDOM from 'react-dom';
 import Main from './Components/Main';
 import Fight from './Components/Fight'
 import Items from './Components/Items';
@@ -30,7 +30,7 @@ class GameApp extends Component {
   }
 }
 
-const rootElement = document.getElementById("root");
-ReactDOM.render(<GameApp />, rootElement);
+// const rootElement = document.getElementById("root");
+// ReactDOM.render(<GameApp />, rootElement);
 
 export default GameApp;

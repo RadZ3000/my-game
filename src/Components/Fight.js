@@ -1,16 +1,19 @@
 import React, { Component } from 'react';
 import Items from './Items';
+import DataObj from './Data';
 
 class Fight extends Component {
     state = {
         renderView: 0,
         textDiv: "Fight!",
-        player1Health: 250,
+        player1Health: DataObj.player1Health,
         player1Attack: 20,
-        player2Health: 250,
+        player2Health: DataObj.player2Health,
         player2Attack: 15,
     }
     handleView = e => {
+        DataObj.player1Health = this.state.player1Health;
+        DataObj.player2Health = this.state.player2Health;
         this.setState({
             renderView: +e.target.value
         })
@@ -69,6 +72,7 @@ class Fight extends Component {
                             <button id="items" value={1} onClick={this.handleView}>Items</button>
                             <button id="end-turn" onClick={this.handleEndTurn}>End Turn</button>
                         </div>
+                        {/* <p>{DataObj.player1Health}</p> */}
                     </div>
                 )
         }
