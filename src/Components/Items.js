@@ -10,6 +10,7 @@
 
 import React, { Component } from 'react';
 import Fight from './Fight';
+import DataObj from './Data';
 
 let itemsObj = {
     Sword: 20,
@@ -25,6 +26,7 @@ class Items extends Component {
     }
     handleChooseItem = e => {
         for(let item in itemsObj){
+            DataObj.player1Attack = itemsObj[item];
             if(item.toString() === e.target.value){
                 this.setState({
                     text: "You choose the " + item +"!",

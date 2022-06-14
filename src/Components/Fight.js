@@ -7,7 +7,7 @@ class Fight extends Component {
         renderView: 0,
         textDiv: "Fight!",
         player1Health: DataObj.player1Health,
-        player1Attack: 20,
+        player1Attack: DataObj.player1Attack,
         player2Health: DataObj.player2Health,
         player2Attack: 15,
     }
@@ -65,8 +65,8 @@ class Fight extends Component {
                 return (
                     <div id="fight-div">
                         <div id="text-div"><h1>{this.state.textDiv}</h1></div>
-                        <div id="player1">Player 1: {this.state.player1Health} HP</div>
-                        <div id="player2">Player 2: {this.state.player2Health} HP</div>
+                        <div id="player1">Player 1: {this.state.player1Health} HP, {this.state.player1Attack} ATK</div>
+                        <div id="player2">Player 2: {this.state.player2Health} HP, {this.state.player2Attack} ATK</div>
                         <div className='button-div'>
                             <button id="attack" onClick={this.handleAttack}>Attack</button>
                             <button id="items" value={1} onClick={this.handleView}>Items</button>
