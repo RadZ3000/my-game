@@ -2,13 +2,14 @@
   text-align: center;
   background-image: url("https://www.fenoxo.com/play/CoC2/release/resources/bitmaps/ui/page_with_paper.png");
   background-size: 100% 100%;
-  height: 78.5%;
+  height: 60.5%;
   width: 60%;
   top: 0;
   left: 20%;
   margin: 0 auto;
   position: absolute;
   overflow-y: auto;
+  font-family: Cardo, Times, Sans Serif;
 }
 
 .btn {
