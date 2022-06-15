@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Items from './Items';
 import DataObj from './Data';
+import './../App.css';
 
 class Fight extends Component {
     state = {
@@ -14,7 +15,7 @@ class Fight extends Component {
     handleView = e => {
         DataObj.player1Health = this.state.player1Health;
         DataObj.player2Health = this.state.player2Health;
-        this.setState({
+        this.setState({ 
             renderView: +e.target.value
         })
     }
@@ -63,14 +64,14 @@ class Fight extends Component {
                 return <Items />;
             default:
                 return (
-                    <div id="fight-div">
+                    <div className="display-divs" id="fight-div">
                         <div id="text-div"><h1>{this.state.textDiv}</h1></div>
                         <div id="player1">Player 1: {this.state.player1Health} HP, {this.state.player1Attack} ATK</div>
                         <div id="player2">Player 2: {this.state.player2Health} HP, {this.state.player2Attack} ATK</div>
                         <div className='button-div'>
-                            <button id="attack" onClick={this.handleAttack}>Attack</button>
-                            <button id="items" value={1} onClick={this.handleView}>Items</button>
-                            <button id="end-turn" onClick={this.handleEndTurn}>End Turn</button>
+                            <button className="btn" id="attack" onClick={this.handleAttack}>Attack</button>
+                            <button className="btn" id="items" value={1} onClick={this.handleView}>Items</button>
+                            <button className="btn" id="end-turn" onClick={this.handleEndTurn}>End Turn</button>
                         </div>
                         {/* <p>{DataObj.player1Health}</p> */}
                     </div>

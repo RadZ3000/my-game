@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import './../App.css';
 
 class Main extends Component {
   state = {
@@ -6,13 +7,13 @@ class Main extends Component {
   }
   render(){
     return(
-      <div id="main-div">
+      <div className="display-divs" id="main-div">
 
         <h1>A Wild Opponent Appears...</h1>
-        <button value={1} onClick={this.props.handleClick}>
+        <button className="btn" value={1} onClick={this.props.handleClick}>
           Fight
         </button>
-        <button value={2} onClick={this.props.handleClick}>
+        <button className="btn" value={2} onClick={this.props.handleClick}>
           Items
         </button>
       </div>

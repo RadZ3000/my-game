@@ -11,6 +11,7 @@
 import React, { Component } from 'react';
 import Fight from './Fight';
 import DataObj from './Data';
+import './../App.css';
 
 let itemsObj = {
     Sword: 20,
@@ -46,11 +47,11 @@ class Items extends Component {
                 return <Fight />;
             default:
                 return(
-                    <div id="items-div">
+                    <div className="display-divs" id="items-div">
                         <h1>{this.state.text}</h1>
-                        <button id="sword" value={"Sword"} onClick={this.handleChooseItem}>Sword</button>
-                        <button id="spear" value ={"Spear"} onClick={this.handleChooseItem}>Spear</button>
-                        <button id="axe" value={"Axe"} onClick={this.handleChooseItem}>Axe</button>
+                        <button className="btn" id="sword" value={"Sword"} onClick={this.handleChooseItem}>Sword</button>
+                        <button className="btn" id="spear" value ={"Spear"} onClick={this.handleChooseItem}>Spear</button>
+                        <button className="btn" id="axe" value={"Axe"} onClick={this.handleChooseItem}>Axe</button>
 
                     </div>
                 );

@@ -4,7 +4,7 @@ This React project was bootstrapped with [Create React App]
 
 ## Project
 
-This is a turn-based fighting RPG implemented with React. Hopefully with time more and more features will be added
+This is a turn-based fighting RPG implemented with React. With time more and more features will be added
 
 ### `npm start`
 
