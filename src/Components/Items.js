@@ -26,8 +26,8 @@ class Items extends Component {
     }
     handleChooseItem = e => {
         for(let item in itemsObj){
-            DataObj.player1Attack = itemsObj[item];
             if(item.toString() === e.target.value){
+                DataObj.player1Attack = itemsObj[item];
                 this.setState({
                     text: "You choose the " + item +"!",
                     Equipped: itemsObj[item]

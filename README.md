@@ -1,10 +1,10 @@
-# Getting Started with Create React App
+# Origin
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This React project was bootstrapped with [Create React App]
 
-## Available Scripts
+## Project
 
-In the project directory, you can run:
+This is a turn-based fighting RPG implemented with React. Hopefully with time more and more features will be added
 
 ### `npm start`
 
