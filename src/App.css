@@ -1,3 +1,7 @@
+html {
+  background: burlywood;
+}
+
 .display-divs {
   text-align: center;
   background-image: url("https://www.fenoxo.com/play/CoC2/release/resources/bitmaps/ui/page_with_paper.png");
